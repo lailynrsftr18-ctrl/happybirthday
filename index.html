@@ -1,28 +1,29 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>🎂 Happy Birthday Deo 💥</title>
-  <meta name="description" content="A nuclear-level birthday surprise for Deo. Mi bozzz!">
+  <title>Happy Birthday, Deo</title>
+  <meta name="description" content="An elegant birthday celebration for Deo. Mi bozzz!">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Chewy&family=Fredoka:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --black: #0A0A0A;
       --jet: #000000;
       --coal: #1a1a1a;
-      --blood: #B91C1C;
-      --red: #DC2626;
-      --crimson: #FF1744;
-      --ruby: #E11D48;
-      --gold: #FFD700;
-      --amber: #FFC107;
+      --blood: #8B0000;
+      --red: #B91C1C;
+      --crimson: #DC143C;
+      --ruby: #9B111E;
+      --gold: #D4AF37;
+      --champagne: #F7E7CE;
+      --cream: #FBF7F0;
       --white: #FFFFFF;
-      --silver: #E5E5E5;
+      --silver: #C0C0C0;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -34,14 +35,14 @@
     }
 
     body {
-      font-family: 'Fredoka', sans-serif;
+      font-family: 'Cormorant Garamond', serif;
       background:
-        radial-gradient(ellipse at top left, rgba(220, 38, 38, 0.3) 0%, transparent 50%),
-        radial-gradient(ellipse at bottom right, rgba(255, 23, 68, 0.25) 0%, transparent 50%),
-        radial-gradient(ellipse at center, rgba(185, 28, 28, 0.15) 0%, transparent 70%),
+        radial-gradient(ellipse at top left, rgba(185, 28, 28, 0.25) 0%, transparent 50%),
+        radial-gradient(ellipse at bottom right, rgba(220, 20, 60, 0.2) 0%, transparent 50%),
+        radial-gradient(ellipse at center, rgba(139, 0, 0, 0.12) 0%, transparent 70%),
         linear-gradient(135deg, #0A0A0A 0%, #1a0505 50%, #0A0A0A 100%);
       background-size: 200% 200%;
-      animation: ambient-glow 15s ease-in-out infinite;
+      animation: ambient-glow 20s ease-in-out infinite;
       color: var(--white);
       position: relative;
       min-height: 100vh;
@@ -52,16 +53,16 @@
       50% { background-position: 100% 100%; }
     }
 
-    /* RED EMBER SPARKS */
+    /* ELEGANT EMBER PARTICLES */
     .sparkles { position: fixed; inset: 0; pointer-events: none; z-index: 1; }
     .sparkle {
       position: absolute;
-      width: 3px; height: 3px;
-      background: var(--crimson);
+      width: 2px; height: 2px;
+      background: var(--gold);
       border-radius: 50%;
       opacity: 0;
-      animation: ember 4s infinite;
-      box-shadow: 0 0 8px var(--crimson), 0 0 16px var(--red);
+      animation: ember 5s infinite;
+      box-shadow: 0 0 6px var(--gold), 0 0 12px var(--crimson);
     }
     @keyframes ember {
       0%, 100% { opacity: 0; transform: translateY(0) scale(0); }
@@ -76,17 +77,17 @@
       z-index: 200;
       background: var(--coal);
       color: var(--gold);
-      border: 2px solid var(--red);
-      width: 50px; height: 50px;
+      border: 1px solid var(--gold);
+      width: 48px; height: 48px;
       border-radius: 50%;
-      font-size: 22px;
+      font-size: 20px;
       cursor: pointer;
-      box-shadow: 0 0 20px rgba(220, 38, 38, 0.6);
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
       transition: all 0.3s;
       opacity: 0;
     }
     .sound-toggle.visible { opacity: 1; }
-    .sound-toggle:hover { transform: scale(1.15); box-shadow: 0 0 30px var(--crimson); }
+    .sound-toggle:hover { transform: scale(1.1); box-shadow: 0 0 30px var(--gold); }
 
     /* INTRO */
     #intro {
@@ -107,46 +108,56 @@
       pointer-events: none;
     }
 
+    .intro-ornament {
+      font-family: 'Cinzel', serif;
+      color: var(--gold);
+      font-size: 32px;
+      letter-spacing: 20px;
+      padding-left: 20px;
+      margin-bottom: 10px;
+      filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.6));
+    }
+
     .intro-emoji {
-      font-size: 120px;
-      animation: emoji-3d-float 2.5s ease-in-out infinite;
+      font-size: 100px;
+      animation: emoji-elegant-float 4s ease-in-out infinite;
       filter:
         drop-shadow(0 4px 0 var(--blood))
-        drop-shadow(0 8px 0 rgba(185, 28, 28, 0.6))
         drop-shadow(0 15px 25px rgba(0,0,0,0.9))
-        drop-shadow(0 0 40px rgba(255, 23, 68, 0.6));
+        drop-shadow(0 0 40px rgba(212, 175, 55, 0.4));
       display: inline-block;
     }
 
-    @keyframes emoji-3d-float {
-      0%, 100% { transform: perspective(400px) rotateX(10deg) rotateY(-8deg) translateY(0) scale(1); }
-      50% { transform: perspective(400px) rotateX(10deg) rotateY(8deg) translateY(-20px) scale(1.08); }
+    @keyframes emoji-elegant-float {
+      0%, 100% { transform: perspective(400px) rotateX(5deg) translateY(0) scale(1); }
+      50% { transform: perspective(400px) rotateX(5deg) translateY(-15px) scale(1.05); }
     }
 
     .intro-title {
-      font-family: 'Bungee', cursive;
-      font-size: clamp(28px, 7vw, 48px);
-      margin: 30px 0 15px;
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      font-size: clamp(22px, 5vw, 36px);
+      margin: 30px 0 10px;
       color: var(--white);
       text-shadow:
-        3px 3px 0 var(--blood),
-        6px 6px 0 var(--jet),
-        9px 9px 30px rgba(220, 38, 38, 0.8);
-      line-height: 1.2;
-      letter-spacing: 2px;
+        2px 2px 0 var(--blood),
+        4px 4px 20px rgba(0,0,0,0.8);
+      line-height: 1.3;
+      letter-spacing: 8px;
     }
 
     .intro-sub {
-      font-family: 'Pacifico', cursive;
-      font-size: clamp(32px, 8vw, 56px);
-      background: linear-gradient(135deg, var(--gold), var(--crimson), var(--gold));
+      font-family: 'Great Vibes', cursive;
+      font-size: clamp(72px, 18vw, 128px);
+      background: linear-gradient(135deg, var(--gold) 0%, var(--champagne) 40%, var(--gold) 60%, var(--crimson) 100%);
       background-size: 200% 200%;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      animation: shimmer 3s ease infinite;
-      filter: drop-shadow(0 0 30px rgba(255, 23, 68, 0.6));
-      margin-bottom: 40px;
+      animation: shimmer 4s ease infinite;
+      filter: drop-shadow(0 0 30px rgba(212, 175, 55, 0.5)) drop-shadow(0 8px 15px rgba(0,0,0,0.8));
+      margin-bottom: 50px;
+      line-height: 1;
     }
 
     @keyframes shimmer {
@@ -155,37 +166,52 @@
     }
 
     .surprise-btn {
-      background: linear-gradient(135deg, var(--red), var(--blood));
+      background: transparent;
       color: var(--gold);
-      font-family: 'Bungee', cursive;
-      font-size: clamp(18px, 4.5vw, 24px);
-      padding: 22px 40px;
-      border: 3px solid var(--gold);
-      border-radius: 50px;
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      font-size: clamp(14px, 3.5vw, 18px);
+      padding: 20px 44px;
+      border: 1px solid var(--gold);
+      border-radius: 2px;
       cursor: pointer;
       box-shadow:
-        0 0 40px rgba(255, 23, 68, 0.8),
-        0 15px 40px rgba(0,0,0,0.8),
-        inset 0 -5px 0 rgba(0,0,0,0.3);
-      transition: all 0.2s ease;
-      animation: pulse-fire 1.5s ease-in-out infinite;
-      letter-spacing: 2px;
+        0 0 40px rgba(212, 175, 55, 0.4),
+        0 0 0 1px rgba(212, 175, 55, 0.2),
+        inset 0 0 20px rgba(139, 0, 0, 0.3);
+      transition: all 0.3s ease;
+      letter-spacing: 6px;
+      position: relative;
+      overflow: hidden;
     }
 
-    @keyframes pulse-fire {
-      0%, 100% { transform: scale(1); box-shadow: 0 0 40px rgba(255, 23, 68, 0.8), 0 15px 40px rgba(0,0,0,0.8), inset 0 -5px 0 rgba(0,0,0,0.3); }
-      50% { transform: scale(1.08); box-shadow: 0 0 80px rgba(255, 23, 68, 1), 0 20px 50px rgba(0,0,0,0.9), inset 0 -5px 0 rgba(0,0,0,0.3); }
+    .surprise-btn::before {
+      content: '';
+      position: absolute;
+      inset: 4px;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 2px;
+      pointer-events: none;
     }
 
-    .surprise-btn:hover { transform: scale(1.15) !important; }
-    .surprise-btn:active { transform: scale(0.95) !important; }
+    .surprise-btn:hover {
+      background: rgba(139, 0, 0, 0.3);
+      color: var(--champagne);
+      box-shadow:
+        0 0 60px rgba(212, 175, 55, 0.6),
+        0 0 0 1px rgba(212, 175, 55, 0.4),
+        inset 0 0 30px rgba(139, 0, 0, 0.5);
+      transform: translateY(-2px);
+    }
+
+    .surprise-btn:active { transform: translateY(0); }
 
     /* MAIN SCENE */
     #main {
       position: relative;
       z-index: 10;
-      padding: 40px 20px;
-      max-width: 600px;
+      padding: 50px 20px;
+      max-width: 620px;
       margin: 0 auto;
       opacity: 0;
       transform: translateY(30px);
@@ -193,68 +219,76 @@
     }
     #main.visible { opacity: 1; transform: translateY(0); }
 
-    .hero { text-align: center; margin-bottom: 40px; }
+    .hero { text-align: center; margin-bottom: 50px; }
+
+    .hero-ornament {
+      font-family: 'Cinzel', serif;
+      color: var(--gold);
+      font-size: 20px;
+      letter-spacing: 15px;
+      padding-left: 15px;
+      margin-bottom: 20px;
+      opacity: 0.8;
+      filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.6));
+    }
 
     .hero-title {
-      font-family: 'Bungee', cursive;
-      font-size: clamp(36px, 9vw, 60px);
-      line-height: 1.1;
+      font-family: 'Cinzel', serif;
+      font-weight: 900;
+      font-size: clamp(32px, 8vw, 56px);
+      line-height: 1.15;
       color: var(--white);
       text-shadow:
-        4px 4px 0 var(--blood),
-        8px 8px 0 var(--jet),
-        10px 10px 30px rgba(220, 38, 38, 0.8);
-      margin-bottom: 15px;
-      letter-spacing: 2px;
+        3px 3px 0 var(--blood),
+        6px 6px 0 var(--jet),
+        8px 8px 30px rgba(185, 28, 28, 0.7);
+      margin-bottom: 20px;
+      letter-spacing: 6px;
     }
 
     .hero-name {
-      font-family: 'Pacifico', cursive;
-      font-size: clamp(60px, 18vw, 120px);
-      background: linear-gradient(135deg, var(--gold) 0%, var(--crimson) 50%, var(--gold) 100%);
+      font-family: 'Great Vibes', cursive;
+      font-size: clamp(80px, 22vw, 160px);
+      background: linear-gradient(135deg, var(--gold) 0%, var(--champagne) 30%, var(--gold) 50%, var(--crimson) 80%, var(--gold) 100%);
       background-size: 200% 200%;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      animation: shimmer 2s ease-in-out infinite, wiggle 3s ease-in-out infinite;
-      filter: drop-shadow(0 0 40px rgba(255, 215, 0, 0.6)) drop-shadow(0 10px 20px rgba(0,0,0,0.9));
+      animation: shimmer 3s ease infinite;
+      filter: drop-shadow(0 0 50px rgba(212, 175, 55, 0.5)) drop-shadow(0 10px 20px rgba(0,0,0,0.9));
       display: inline-block;
-    }
-
-    @keyframes wiggle {
-      0%, 100% { transform: rotate(-3deg); }
-      50% { transform: rotate(3deg); }
+      line-height: 1;
+      padding-bottom: 20px;
     }
 
     .emoji-row {
       margin-top: 25px;
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 24px;
       flex-wrap: wrap;
     }
 
     .emoji-row span {
-      font-size: 56px;
+      font-size: 48px;
       display: inline-block;
       filter:
-        drop-shadow(0 3px 0 rgba(185, 28, 28, 0.6))
-        drop-shadow(0 6px 0 rgba(185, 28, 28, 0.4))
-        drop-shadow(0 12px 20px rgba(0,0,0,0.8))
-        drop-shadow(0 0 25px rgba(255, 23, 68, 0.5));
-      animation: emoji-bounce-3d 2s ease-in-out infinite;
+        drop-shadow(0 3px 0 rgba(139, 0, 0, 0.5))
+        drop-shadow(0 10px 18px rgba(0,0,0,0.7))
+        drop-shadow(0 0 25px rgba(212, 175, 55, 0.3));
+      animation: emoji-float-elegant 3s ease-in-out infinite;
       transform-origin: center bottom;
     }
 
     .emoji-row span:nth-child(1) { animation-delay: 0s; }
-    .emoji-row span:nth-child(2) { animation-delay: 0.15s; }
-    .emoji-row span:nth-child(3) { animation-delay: 0.3s; }
-    .emoji-row span:nth-child(4) { animation-delay: 0.45s; }
-    .emoji-row span:nth-child(5) { animation-delay: 0.6s; }
+    .emoji-row span:nth-child(2) { animation-delay: 0.3s; }
+    .emoji-row span:nth-child(3) { animation-delay: 0.6s; }
+    .emoji-row span:nth-child(4) { animation-delay: 0.9s; }
+    .emoji-row span:nth-child(5) { animation-delay: 1.2s; }
 
-    @keyframes emoji-bounce-3d {
-      0%, 100% { transform: perspective(200px) rotateY(-10deg) translateY(0) scale(1); }
-      50% { transform: perspective(200px) rotateY(10deg) translateY(-20px) scale(1.15); }
+    @keyframes emoji-float-elegant {
+      0%, 100% { transform: perspective(200px) rotateY(-8deg) translateY(0) scale(1); }
+      50% { transform: perspective(200px) rotateY(8deg) translateY(-14px) scale(1.08); }
     }
 
     /* CAKE */
@@ -263,25 +297,27 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin: 20px 0 40px;
+      margin: 30px 0 50px;
       cursor: pointer;
       user-select: none;
       position: relative;
     }
 
     .cake-container .hint {
-      font-family: 'Pacifico', cursive;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
       font-size: 18px;
       color: var(--gold);
-      margin-top: 15px;
-      text-shadow: 0 0 15px rgba(255, 215, 0, 0.8), 2px 2px 4px rgba(0,0,0,0.8);
-      animation: fade-blink 2s ease-in-out infinite;
+      margin-top: 20px;
+      text-shadow: 0 0 15px rgba(212, 175, 55, 0.7), 2px 2px 4px rgba(0,0,0,0.8);
+      animation: fade-blink 2.5s ease-in-out infinite;
       pointer-events: none;
+      letter-spacing: 2px;
     }
 
     @keyframes fade-blink {
       0%, 100% { opacity: 0.5; transform: translateY(0); }
-      50% { opacity: 1; transform: translateY(-5px); }
+      50% { opacity: 1; transform: translateY(-4px); }
     }
 
     .cake-container.blown .hint { display: none; }
@@ -290,7 +326,7 @@
       position: relative;
       width: 240px;
       height: 220px;
-      transition: transform 0.3s ease;
+      transition: transform 0.4s ease;
       filter: drop-shadow(0 20px 40px rgba(0,0,0,0.8));
     }
 
@@ -300,7 +336,7 @@
       position: absolute;
       width: 10px;
       height: 36px;
-      background: linear-gradient(to bottom, var(--gold) 0%, #FFA500 100%);
+      background: linear-gradient(to bottom, var(--champagne) 0%, var(--gold) 100%);
       top: 20px;
       border-radius: 2px;
     }
@@ -364,7 +400,7 @@
       100% { opacity: 0; transform: translateX(-80%) translateY(-80px) scale(2); }
     }
 
-    /* Red/black themed cake */
+    /* Elegant cake — deep red velvet with gold trim */
     .cake-top {
       position: absolute;
       top: 55px;
@@ -401,7 +437,7 @@
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 8px;
-      background: repeating-linear-gradient(90deg, var(--gold) 0px, var(--gold) 10px, var(--crimson) 10px, var(--crimson) 20px, var(--white) 20px, var(--white) 30px, var(--red) 30px, var(--red) 40px);
+      background: repeating-linear-gradient(90deg, var(--gold) 0px, var(--gold) 10px, var(--crimson) 10px, var(--crimson) 20px, var(--champagne) 20px, var(--champagne) 30px, var(--red) 30px, var(--red) 40px);
       border-radius: 5px 5px 0 0;
     }
 
@@ -427,17 +463,25 @@
       box-shadow: 0 10px 30px rgba(0,0,0,0.6);
     }
 
-    /* WISH CARD (swipeable) */
+    /* WISH CARD */
     .wish-section { margin-top: 30px; }
 
     .section-title {
-      font-family: 'Bungee', cursive;
-      font-size: clamp(22px, 5vw, 28px);
+      font-family: 'Cinzel', serif;
+      font-weight: 600;
+      font-size: clamp(18px, 4vw, 22px);
       text-align: center;
-      margin-bottom: 20px;
-      color: var(--white);
-      text-shadow: 3px 3px 0 var(--blood), 5px 5px 15px rgba(0,0,0,0.8);
-      letter-spacing: 2px;
+      margin-bottom: 25px;
+      color: var(--gold);
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.8), 0 0 20px rgba(212, 175, 55, 0.4);
+      letter-spacing: 6px;
+    }
+
+    .section-title .divider {
+      display: inline-block;
+      color: var(--gold);
+      margin: 0 15px;
+      opacity: 0.7;
     }
 
     .wish-card-wrapper {
@@ -446,14 +490,15 @@
     }
 
     .wish-card {
-      background: linear-gradient(135deg, var(--coal) 0%, var(--jet) 100%);
+      background:
+        linear-gradient(135deg, var(--coal) 0%, var(--jet) 100%);
       color: var(--white);
-      border-radius: 24px;
-      padding: 35px 28px;
+      border-radius: 2px;
+      padding: 40px 30px;
       box-shadow:
-        0 0 50px rgba(220, 38, 38, 0.5),
+        0 0 60px rgba(185, 28, 28, 0.4),
         0 20px 50px rgba(0,0,0,0.8),
-        inset 0 0 30px rgba(220, 38, 38, 0.1);
+        inset 0 0 40px rgba(185, 28, 28, 0.08);
       min-height: 220px;
       display: flex;
       flex-direction: column;
@@ -461,9 +506,18 @@
       justify-content: center;
       text-align: center;
       position: relative;
-      border: 3px solid var(--red);
+      border: 1px solid var(--gold);
       transition: transform 0.1s ease, opacity 0.3s ease;
       cursor: grab;
+    }
+
+    .wish-card::before {
+      content: '';
+      position: absolute;
+      inset: 6px;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 2px;
+      pointer-events: none;
     }
 
     .wish-card:active { cursor: grabbing; }
@@ -475,37 +529,40 @@
     }
 
     .wish-emoji {
-      font-size: 72px;
-      margin-bottom: 15px;
+      font-size: 64px;
+      margin-bottom: 20px;
       filter:
         drop-shadow(0 3px 0 var(--blood))
-        drop-shadow(0 6px 0 rgba(185, 28, 28, 0.5))
         drop-shadow(0 12px 20px rgba(0,0,0,0.6))
-        drop-shadow(0 0 30px rgba(255, 23, 68, 0.4));
-      animation: emoji-bounce-3d 2.5s ease-in-out infinite;
+        drop-shadow(0 0 30px rgba(212, 175, 55, 0.4));
+      animation: emoji-float-elegant 3s ease-in-out infinite;
       display: inline-block;
     }
 
     .wish-text {
-      font-size: clamp(16px, 4vw, 19px);
-      line-height: 1.55;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(17px, 4vw, 20px);
+      line-height: 1.6;
       font-weight: 500;
-      color: var(--white);
+      color: var(--cream);
     }
 
     .wish-text .highlight {
       color: var(--gold);
       font-weight: 700;
+      font-style: italic;
     }
 
     .swipe-hint {
       text-align: center;
-      margin-top: 20px;
-      font-family: 'Pacifico', cursive;
-      font-size: 18px;
+      margin-top: 24px;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 17px;
       color: var(--crimson);
-      text-shadow: 0 0 15px rgba(255, 23, 68, 0.8);
-      animation: swipe-prompt 2s ease-in-out infinite;
+      text-shadow: 0 0 15px rgba(220, 20, 60, 0.7);
+      animation: swipe-prompt 2.5s ease-in-out infinite;
+      letter-spacing: 2px;
     }
 
     @keyframes swipe-prompt {
@@ -517,49 +574,82 @@
     .boom-emoji-row {
       display: flex;
       justify-content: center;
-      gap: 15px;
-      margin-top: 8px;
-      font-size: 30px;
+      gap: 20px;
+      margin-top: 10px;
+      font-size: 24px;
+      color: var(--gold);
+      font-family: 'Cinzel', serif;
+      letter-spacing: 8px;
     }
 
     /* FINAL MESSAGE */
     .final-message {
-      margin-top: 50px;
+      margin-top: 60px;
       text-align: center;
       padding: 30px 20px;
       opacity: 1;
       transition: all 0.6s ease;
     }
 
+    .final-divider {
+      font-family: 'Cinzel', serif;
+      color: var(--gold);
+      font-size: 24px;
+      letter-spacing: 20px;
+      padding-left: 20px;
+      margin-bottom: 25px;
+      opacity: 0.7;
+      filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.5));
+    }
+
     .final-text {
-      font-family: 'Pacifico', cursive;
-      font-size: clamp(26px, 6vw, 38px);
-      line-height: 1.4;
-      margin-bottom: 30px;
-      background: linear-gradient(135deg, var(--gold) 0%, var(--white) 50%, var(--gold) 100%);
+      font-family: 'Great Vibes', cursive;
+      font-size: clamp(36px, 9vw, 56px);
+      line-height: 1.3;
+      margin-bottom: 40px;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--champagne) 40%, var(--white) 50%, var(--gold) 100%);
       background-size: 200% 200%;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      animation: shimmer 3s ease infinite;
-      filter: drop-shadow(0 5px 20px rgba(255, 215, 0, 0.6)) drop-shadow(0 10px 20px rgba(0,0,0,0.8));
+      animation: shimmer 4s ease infinite;
+      filter: drop-shadow(0 5px 20px rgba(212, 175, 55, 0.6)) drop-shadow(0 10px 20px rgba(0,0,0,0.8));
     }
 
     .final-btn {
-      background: linear-gradient(135deg, var(--red), var(--blood));
+      background: transparent;
       color: var(--gold);
-      font-family: 'Bungee', cursive;
-      font-size: 18px;
-      padding: 18px 32px;
-      border: 3px solid var(--gold);
-      border-radius: 50px;
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 18px 36px;
+      border: 1px solid var(--gold);
+      border-radius: 2px;
       cursor: pointer;
-      box-shadow: 0 0 30px rgba(255, 23, 68, 0.6), 0 10px 30px rgba(0,0,0,0.8);
-      transition: all 0.2s;
-      letter-spacing: 2px;
+      box-shadow:
+        0 0 30px rgba(212, 175, 55, 0.4),
+        0 10px 30px rgba(0,0,0,0.8),
+        inset 0 0 20px rgba(139, 0, 0, 0.2);
+      transition: all 0.3s;
+      letter-spacing: 5px;
+      position: relative;
     }
 
-    .final-btn:hover { transform: scale(1.1); box-shadow: 0 0 50px rgba(255, 23, 68, 1), 0 15px 40px rgba(0,0,0,0.9); }
+    .final-btn::before {
+      content: '';
+      position: absolute;
+      inset: 4px;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 2px;
+      pointer-events: none;
+    }
+
+    .final-btn:hover {
+      background: rgba(139, 0, 0, 0.3);
+      color: var(--champagne);
+      transform: translateY(-2px);
+      box-shadow: 0 0 50px rgba(212, 175, 55, 0.6), 0 15px 40px rgba(0,0,0,0.9);
+    }
 
     /* BALLOONS */
     .balloons { position: fixed; inset: 0; pointer-events: none; z-index: 5; }
@@ -654,8 +744,9 @@
       position: fixed;
       top: 50%; left: 50%;
       transform: translate(-50%, -50%) scale(0);
-      font-family: 'Bungee', cursive;
-      font-size: clamp(60px, 20vw, 180px);
+      font-family: 'Cinzel', serif;
+      font-weight: 900;
+      font-size: clamp(50px, 18vw, 160px);
       color: var(--white);
       text-shadow:
         0 0 20px var(--crimson),
@@ -665,17 +756,22 @@
       z-index: 1000;
       pointer-events: none;
       opacity: 0;
-      letter-spacing: 5px;
+      letter-spacing: 10px;
       white-space: nowrap;
+    }
+
+    .boom-text .ornament {
+      color: var(--gold);
+      margin: 0 20px;
     }
 
     .boom-text.active { animation: boom-pop 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
 
     @keyframes boom-pop {
-      0% { opacity: 0; transform: translate(-50%, -50%) scale(0) rotate(-30deg); }
-      30% { opacity: 1; transform: translate(-50%, -50%) scale(1.3) rotate(5deg); }
-      60% { opacity: 1; transform: translate(-50%, -50%) scale(1) rotate(-2deg); }
-      100% { opacity: 0; transform: translate(-50%, -50%) scale(1.8) rotate(10deg); }
+      0% { opacity: 0; transform: translate(-50%, -50%) scale(0) rotate(-20deg); }
+      30% { opacity: 1; transform: translate(-50%, -50%) scale(1.2) rotate(3deg); }
+      60% { opacity: 1; transform: translate(-50%, -50%) scale(1) rotate(-1deg); }
+      100% { opacity: 0; transform: translate(-50%, -50%) scale(1.6) rotate(5deg); }
     }
 
     .shake-screen { animation: shake 0.6s ease; }
@@ -704,7 +800,7 @@
 </head>
 <body>
 
-  <!-- Sparks -->
+  <!-- Ember sparks -->
   <div class="sparkles" id="sparkles"></div>
 
   <!-- Balloons -->
@@ -718,28 +814,30 @@
   <div class="shockwave" id="shockwave1"></div>
   <div class="shockwave" id="shockwave2" style="animation-delay: 0.2s;"></div>
   <div class="shockwave" id="shockwave3" style="animation-delay: 0.4s;"></div>
-  <div class="boom-text" id="boomText">💥 BOOM! 💥</div>
+  <div class="boom-text" id="boomText"><span class="ornament">✦</span>BOOM<span class="ornament">✦</span></div>
 
   <!-- INTRO -->
   <div id="intro">
+    <div class="intro-ornament">✦ ✦ ✦</div>
     <div class="intro-emoji">🎁</div>
-    <div class="intro-title">A GIFT FOR...</div>
+    <div class="intro-title">A GIFT FOR</div>
     <div class="intro-sub">Deo</div>
     <button class="surprise-btn" onclick="revealSurprise()">
-      💥 UNBOX THE CHAOS 💥
+      REVEAL THE SURPRISE
     </button>
   </div>
 
   <!-- MAIN -->
   <div id="main">
     <div class="hero">
+      <div class="hero-ornament">✦ ✦ ✦</div>
       <div class="hero-title">HAPPY<br>BIRTHDAY</div>
-      <div class="hero-name">Deo!</div>
+      <div class="hero-name">Deo</div>
       <div class="emoji-row">
+        <span>🕯️</span>
+        <span>🥂</span>
         <span>🎂</span>
-        <span>🥳</span>
-        <span>🎈</span>
-        <span>🎁</span>
+        <span>🌹</span>
         <span>✨</span>
       </div>
     </div>
@@ -756,15 +854,15 @@
         <div class="cake-bottom"></div>
         <div class="cake-plate"></div>
       </div>
-      <div class="hint">👆 Klik untuk tiup lilin!</div>
+      <div class="hint">Click to blow out the candles</div>
     </div>
 
     <!-- Single wish card (swipeable) -->
     <div class="wish-section">
-      <div class="section-title">🔥 PESAN SPESIAL 🔥</div>
+      <div class="section-title"><span class="divider">✦</span>A SPECIAL MESSAGE<span class="divider">✦</span></div>
       <div class="wish-card-wrapper">
         <div class="wish-card" id="wishCard">
-          <div class="wish-emoji">🥳</div>
+          <div class="wish-emoji">🥂</div>
           <div class="wish-text">
             <strong class="highlight">Happy birthday mi bozzz!</strong> 🥳✨<br><br>
             <strong class="highlight">More money, zero encok, endless adventures with me!</strong> Sehat selalu ya biar impian kita keliling dunia bisa kecentang semua! 💸✈️
@@ -772,28 +870,29 @@
         </div>
       </div>
       <div class="swipe-hint">
-        ← Geser untuk BOM NUKLIR 💣
-        <div class="boom-emoji-row">💥 🚀 💥</div>
+        Swipe to detonate
+        <div class="boom-emoji-row">✦ ✦ ✦</div>
       </div>
     </div>
 
     <!-- Final message -->
     <div class="final-message" id="finalMessage">
+      <div class="final-divider">✦ ✦ ✦</div>
       <div class="final-text">Wish u all the best mi bozzz!</div>
-      <button class="final-btn" onclick="megaCelebrate()">🎆 LEDAKKAN LAGI 🎆</button>
+      <button class="final-btn" onclick="megaCelebrate()">CELEBRATE AGAIN</button>
     </div>
   </div>
 
   <script>
-    // ===== SPARKS =====
+    // ===== EMBER SPARKS =====
     const sparklesContainer = document.getElementById('sparkles');
     for (let i = 0; i < 40; i++) {
       const s = document.createElement('div');
       s.className = 'sparkle';
       s.style.left = Math.random() * 100 + '%';
       s.style.top = Math.random() * 100 + '%';
-      s.style.animationDelay = Math.random() * 4 + 's';
-      s.style.animationDuration = (3 + Math.random() * 3) + 's';
+      s.style.animationDelay = Math.random() * 5 + 's';
+      s.style.animationDuration = (4 + Math.random() * 3) + 's';
       sparklesContainer.appendChild(s);
     }
 
@@ -830,7 +929,6 @@
       osc.type = type;
       osc.frequency.value = frequency;
 
-      // ADSR envelope for nicer sound
       gain.gain.setValueAtTime(0, startTime);
       gain.gain.linearRampToValueAtTime(volume, startTime + 0.03);
       gain.gain.linearRampToValueAtTime(volume * 0.7, startTime + duration * 0.5);
@@ -859,16 +957,12 @@
 
       // Happy Birthday in C major
       const melody = [
-        // "Hap-py birth-day to you"
         [n.C4, e], [n.C4, e], [n.D4, q], [n.C4, q], [n.F4, q], [n.E4, h],
         [null, 0.15],
-        // "Hap-py birth-day to you"
         [n.C4, e], [n.C4, e], [n.D4, q], [n.C4, q], [n.G4, q], [n.F4, h],
         [null, 0.15],
-        // "Hap-py birth-day dear De-o"
         [n.C4, e], [n.C4, e], [n.C5, q], [n.A4, q], [n.F4, q], [n.E4, q], [n.D4, dq],
         [null, 0.15],
-        // "Hap-py birth-day to you"
         [n.Bb4, e], [n.Bb4, e], [n.A4, q], [n.F4, q], [n.G4, q], [n.F4, h]
       ];
 
@@ -876,13 +970,12 @@
       melody.forEach(([freq, dur]) => {
         if (freq !== null) {
           playNote(freq, time, dur * 0.95, 'triangle', 0.22);
-          // Add octave harmonic for richness
           playNote(freq * 2, time, dur * 0.95, 'sine', 0.08);
         }
         time += dur;
       });
 
-      // After the melody ends, speak "Deo!" with TTS
+      // After the melody ends, speak "Happy Birthday Deo!"
       const totalDuration = (time - ctx.currentTime) * 1000;
       setTimeout(() => {
         speakDeo();
@@ -907,7 +1000,6 @@
       if (!ctx) return;
       if (ctx.state === 'suspended') ctx.resume();
 
-      // White noise explosion
       const bufferSize = ctx.sampleRate * 1.2;
       const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
       const data = buffer.getChannelData(0);
@@ -918,13 +1010,11 @@
       const noise = ctx.createBufferSource();
       noise.buffer = buffer;
 
-      // Low-pass filter for "boom" effect
       const filter = ctx.createBiquadFilter();
       filter.type = 'lowpass';
       filter.frequency.setValueAtTime(2000, ctx.currentTime);
       filter.frequency.exponentialRampToValueAtTime(60, ctx.currentTime + 1.0);
 
-      // Gain envelope
       const gain = ctx.createGain();
       gain.gain.setValueAtTime(0.8, ctx.currentTime);
       gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 1.2);
@@ -936,7 +1026,6 @@
       noise.start();
       noise.stop(ctx.currentTime + 1.2);
 
-      // Add a low frequency "thump"
       const thump = ctx.createOscillator();
       const thumpGain = ctx.createGain();
       thump.type = 'sine';
@@ -967,7 +1056,7 @@
     }
 
     // ===== CONFETTI =====
-    const colors = ['#DC2626', '#FF1744', '#FFD700', '#FFFFFF', '#B91C1C', '#FFC107', '#E11D48'];
+    const colors = ['#B91C1C', '#DC143C', '#D4AF37', '#F7E7CE', '#8B0000', '#9B111E', '#FBF7F0'];
     const shapes = ['square', 'circle', 'triangle'];
 
     function createConfetti(x, y, count = 1, burst = false) {
@@ -1056,13 +1145,11 @@
       if (bombTriggered) return;
       bombTriggered = true;
 
-      // 1. White flash
       const flash = document.getElementById('flash');
       flash.classList.remove('active');
-      void flash.offsetWidth; // force reflow
+      void flash.offsetWidth;
       flash.classList.add('active');
 
-      // 2. Shockwaves
       ['shockwave1', 'shockwave2', 'shockwave3'].forEach((id, i) => {
         const sw = document.getElementById(id);
         sw.classList.remove('active');
@@ -1070,20 +1157,16 @@
         setTimeout(() => sw.classList.add('active'), i * 200);
       });
 
-      // 3. BOOM text
       const boom = document.getElementById('boomText');
       boom.classList.remove('active');
       void boom.offsetWidth;
       boom.classList.add('active');
 
-      // 4. Screen shake
       document.body.classList.add('shake-screen');
       setTimeout(() => document.body.classList.remove('shake-screen'), 600);
 
-      // 5. Explosion sound
       playExplosionSound();
 
-      // 6. MASSIVE confetti
       createConfetti(0, 0, 300, false);
       const cx = window.innerWidth / 2;
       const cy = window.innerHeight / 2;
@@ -1091,7 +1174,6 @@
         burstConfetti(cx, cy);
       }
 
-      // 7. Fireworks everywhere
       setTimeout(() => launchFirework(cx, cy), 100);
       setTimeout(() => launchFirework(cx - 200, cy - 100), 300);
       setTimeout(() => launchFirework(cx + 200, cy - 100), 400);
@@ -1101,12 +1183,10 @@
       setTimeout(() => launchFirework(window.innerWidth - 100, 200), 800);
       setTimeout(() => launchFirework(cx, 150), 900);
 
-      // 8. Balloon tsunami
       for (let i = 0; i < 25; i++) {
         setTimeout(launchBalloon, i * 100);
       }
 
-      // 9. Reset bomb after cooldown so it can be re-triggered
       setTimeout(() => { bombTriggered = false; }, 2500);
     }
 
@@ -1127,7 +1207,6 @@
       currentX = x;
       const dx = x - startX;
       const dy = Math.abs(y - startY);
-      // Only slide if horizontal movement dominates
       if (Math.abs(dx) > dy) {
         const rotation = dx / 20;
         wishCard.style.transform = `translateX(${dx}px) rotate(${rotation}deg)`;
@@ -1141,20 +1220,17 @@
       wishCard.style.transition = 'transform 0.4s ease, opacity 0.4s ease';
 
       if (Math.abs(dx) > 100) {
-        // Swiped past threshold → TRIGGER NUCLEAR BOMB
         wishCard.style.setProperty('--dismiss-x', (dx > 0 ? '150vw' : '-150vw'));
         wishCard.style.setProperty('--dismiss-r', (dx > 0 ? '30deg' : '-30deg'));
         wishCard.classList.add('dismissed');
         setTimeout(() => {
           triggerNuclearBomb();
-          // Bring card back after explosion
           setTimeout(() => {
             wishCard.classList.remove('dismissed');
             wishCard.style.transform = '';
           }, 2200);
         }, 200);
       } else {
-        // Snap back
         wishCard.style.transform = 'translateX(0) rotate(0)';
       }
     }
@@ -1178,7 +1254,7 @@
     });
     document.addEventListener('mouseup', handleEnd);
 
-    // Also: tap/click wish card without swiping = small confetti nudge
+    // Tap/click without swiping = small confetti nudge
     wishCard.addEventListener('click', (e) => {
       if (Math.abs(currentX - startX) < 10) {
         const r = wishCard.getBoundingClientRect();
@@ -1195,7 +1271,7 @@
         createConfetti(0, 0, 200, false);
         for (let i = 0; i < 15; i++) setTimeout(launchBalloon, i * 300);
         setInterval(launchBalloon, 2500);
-        // 🎵 Play Happy Birthday!
+        // Play Happy Birthday
         setTimeout(() => playHappyBirthday(), 400);
       }, 500);
     }
