@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>🎂 Happy Birthday Deo 💥</title>
+  <meta name="description" content="A nuclear-level birthday surprise for Deo. Mi bozzz!">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Chewy&family=Fredoka:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --black: #0A0A0A;
+      --jet: #000000;
+      --coal: #1a1a1a;
+      --blood: #B91C1C;
+      --red: #DC2626;
+      --crimson: #FF1744;
+      --ruby: #E11D48;
+      --gold: #FFD700;
+      --amber: #FFC107;
+      --white: #FFFFFF;
+      --silver: #E5E5E5;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      min-height: 100%;
+      overflow-x: hidden;
+      background: var(--jet);
+    }
+
+    body {
+      font-family: 'Fredoka', sans-serif;
+      background:
+        radial-gradient(ellipse at top left, rgba(220, 38, 38, 0.3) 0%, transparent 50%),
+        radial-gradient(ellipse at bottom right, rgba(255, 23, 68, 0.25) 0%, transparent 50%),
+        radial-gradient(ellipse at center, rgba(185, 28, 28, 0.15) 0%, transparent 70%),
+        linear-gradient(135deg, #0A0A0A 0%, #1a0505 50%, #0A0A0A 100%);
+      background-size: 200% 200%;
+      animation: ambient-glow 15s ease-in-out infinite;
+      color: var(--white);
+      position: relative;
+      min-height: 100vh;
+    }
+
+    @keyframes ambient-glow {
+      0%, 100% { background-position: 0% 0%; }
+      50% { background-position: 100% 100%; }
+    }
+
+    /* RED EMBER SPARKS */
+    .sparkles { position: fixed; inset: 0; pointer-events: none; z-index: 1; }
+    .sparkle {
+      position: absolute;
+      width: 3px; height: 3px;
+      background: var(--crimson);
+      border-radius: 50%;
+      opacity: 0;
+      animation: ember 4s infinite;
+      box-shadow: 0 0 8px var(--crimson), 0 0 16px var(--red);
+    }
+    @keyframes ember {
+      0%, 100% { opacity: 0; transform: translateY(0) scale(0); }
+      30% { opacity: 1; transform: translateY(-30px) scale(1.5); }
+      70% { opacity: 0.6; transform: translateY(-60px) scale(1); }
+    }
+
+    /* SOUND TOGGLE */
+    .sound-toggle {
+      position: fixed;
+      top: 20px; right: 20px;
+      z-index: 200;
+      background: var(--coal);
+      color: var(--gold);
+      border: 2px solid var(--red);
+      width: 50px; height: 50px;
+      border-radius: 50%;
+      font-size: 22px;
+      cursor: pointer;
+      box-shadow: 0 0 20px rgba(220, 38, 38, 0.6);
+      transition: all 0.3s;
+      opacity: 0;
+    }
+    .sound-toggle.visible { opacity: 1; }
+    .sound-toggle:hover { transform: scale(1.15); box-shadow: 0 0 30px var(--crimson); }
+
+    /* INTRO */
+    #intro {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+      padding: 20px;
+      text-align: center;
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    #intro.hidden {
+      opacity: 0;
+      transform: scale(1.3);
+      pointer-events: none;
+    }
+
+    .intro-emoji {
+      font-size: 120px;
+      animation: emoji-3d-float 2.5s ease-in-out infinite;
+      filter:
+        drop-shadow(0 4px 0 var(--blood))
+        drop-shadow(0 8px 0 rgba(185, 28, 28, 0.6))
+        drop-shadow(0 15px 25px rgba(0,0,0,0.9))
+        drop-shadow(0 0 40px rgba(255, 23, 68, 0.6));
+      display: inline-block;
+    }
+
+    @keyframes emoji-3d-float {
+      0%, 100% { transform: perspective(400px) rotateX(10deg) rotateY(-8deg) translateY(0) scale(1); }
+      50% { transform: perspective(400px) rotateX(10deg) rotateY(8deg) translateY(-20px) scale(1.08); }
+    }
+
+    .intro-title {
+      font-family: 'Bungee', cursive;
+      font-size: clamp(28px, 7vw, 48px);
+      margin: 30px 0 15px;
+      color: var(--white);
+      text-shadow:
+        3px 3px 0 var(--blood),
+        6px 6px 0 var(--jet),
+        9px 9px 30px rgba(220, 38, 38, 0.8);
+      line-height: 1.2;
+      letter-spacing: 2px;
+    }
+
+    .intro-sub {
+      font-family: 'Pacifico', cursive;
+      font-size: clamp(32px, 8vw, 56px);
+      background: linear-gradient(135deg, var(--gold), var(--crimson), var(--gold));
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 3s ease infinite;
+      filter: drop-shadow(0 0 30px rgba(255, 23, 68, 0.6));
+      margin-bottom: 40px;
+    }
+
+    @keyframes shimmer {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    .surprise-btn {
+      background: linear-gradient(135deg, var(--red), var(--blood));
+      color: var(--gold);
+      font-family: 'Bungee', cursive;
+      font-size: clamp(18px, 4.5vw, 24px);
+      padding: 22px 40px;
+      border: 3px solid var(--gold);
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow:
+        0 0 40px rgba(255, 23, 68, 0.8),
+        0 15px 40px rgba(0,0,0,0.8),
+        inset 0 -5px 0 rgba(0,0,0,0.3);
+      transition: all 0.2s ease;
+      animation: pulse-fire 1.5s ease-in-out infinite;
+      letter-spacing: 2px;
+    }
+
+    @keyframes pulse-fire {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 40px rgba(255, 23, 68, 0.8), 0 15px 40px rgba(0,0,0,0.8), inset 0 -5px 0 rgba(0,0,0,0.3); }
+      50% { transform: scale(1.08); box-shadow: 0 0 80px rgba(255, 23, 68, 1), 0 20px 50px rgba(0,0,0,0.9), inset 0 -5px 0 rgba(0,0,0,0.3); }
+    }
+
+    .surprise-btn:hover { transform: scale(1.15) !important; }
+    .surprise-btn:active { transform: scale(0.95) !important; }
+
+    /* MAIN SCENE */
+    #main {
+      position: relative;
+      z-index: 10;
+      padding: 40px 20px;
+      max-width: 600px;
+      margin: 0 auto;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+    #main.visible { opacity: 1; transform: translateY(0); }
+
+    .hero { text-align: center; margin-bottom: 40px; }
+
+    .hero-title {
+      font-family: 'Bungee', cursive;
+      font-size: clamp(36px, 9vw, 60px);
+      line-height: 1.1;
+      color: var(--white);
+      text-shadow:
+        4px 4px 0 var(--blood),
+        8px 8px 0 var(--jet),
+        10px 10px 30px rgba(220, 38, 38, 0.8);
+      margin-bottom: 15px;
+      letter-spacing: 2px;
+    }
+
+    .hero-name {
+      font-family: 'Pacifico', cursive;
+      font-size: clamp(60px, 18vw, 120px);
+      background: linear-gradient(135deg, var(--gold) 0%, var(--crimson) 50%, var(--gold) 100%);
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 2s ease-in-out infinite, wiggle 3s ease-in-out infinite;
+      filter: drop-shadow(0 0 40px rgba(255, 215, 0, 0.6)) drop-shadow(0 10px 20px rgba(0,0,0,0.9));
+      display: inline-block;
+    }
+
+    @keyframes wiggle {
+      0%, 100% { transform: rotate(-3deg); }
+      50% { transform: rotate(3deg); }
+    }
+
+    .emoji-row {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .emoji-row span {
+      font-size: 56px;
+      display: inline-block;
+      filter:
+        drop-shadow(0 3px 0 rgba(185, 28, 28, 0.6))
+        drop-shadow(0 6px 0 rgba(185, 28, 28, 0.4))
+        drop-shadow(0 12px 20px rgba(0,0,0,0.8))
+        drop-shadow(0 0 25px rgba(255, 23, 68, 0.5));
+      animation: emoji-bounce-3d 2s ease-in-out infinite;
+      transform-origin: center bottom;
+    }
+
+    .emoji-row span:nth-child(1) { animation-delay: 0s; }
+    .emoji-row span:nth-child(2) { animation-delay: 0.15s; }
+    .emoji-row span:nth-child(3) { animation-delay: 0.3s; }
+    .emoji-row span:nth-child(4) { animation-delay: 0.45s; }
+    .emoji-row span:nth-child(5) { animation-delay: 0.6s; }
+
+    @keyframes emoji-bounce-3d {
+      0%, 100% { transform: perspective(200px) rotateY(-10deg) translateY(0) scale(1); }
+      50% { transform: perspective(200px) rotateY(10deg) translateY(-20px) scale(1.15); }
+    }
+
+    /* CAKE */
+    .cake-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 20px 0 40px;
+      cursor: pointer;
+      user-select: none;
+      position: relative;
+    }
+
+    .cake-container .hint {
+      font-family: 'Pacifico', cursive;
+      font-size: 18px;
+      color: var(--gold);
+      margin-top: 15px;
+      text-shadow: 0 0 15px rgba(255, 215, 0, 0.8), 2px 2px 4px rgba(0,0,0,0.8);
+      animation: fade-blink 2s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    @keyframes fade-blink {
+      0%, 100% { opacity: 0.5; transform: translateY(0); }
+      50% { opacity: 1; transform: translateY(-5px); }
+    }
+
+    .cake-container.blown .hint { display: none; }
+
+    .cake {
+      position: relative;
+      width: 240px;
+      height: 220px;
+      transition: transform 0.3s ease;
+      filter: drop-shadow(0 20px 40px rgba(0,0,0,0.8));
+    }
+
+    .cake-container:hover .cake { transform: scale(1.05) rotate(-2deg); }
+
+    .candle {
+      position: absolute;
+      width: 10px;
+      height: 36px;
+      background: linear-gradient(to bottom, var(--gold) 0%, #FFA500 100%);
+      top: 20px;
+      border-radius: 2px;
+    }
+
+    .candle::before {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 4px;
+      background: var(--blood);
+      border-radius: 2px;
+    }
+
+    .candle:nth-child(1) { left: 50px; }
+    .candle:nth-child(2) { left: 90px; }
+    .candle:nth-child(3) { left: 130px; }
+    .candle:nth-child(4) { left: 170px; }
+
+    .flame {
+      position: absolute;
+      top: -16px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 14px;
+      height: 20px;
+      background: radial-gradient(ellipse at center bottom, var(--gold) 0%, var(--crimson) 60%, transparent 100%);
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+      animation: flicker 0.6s ease-in-out infinite alternate;
+      box-shadow: 0 0 20px var(--gold), 0 0 40px var(--crimson);
+    }
+
+    @keyframes flicker {
+      0% { transform: translateX(-50%) scale(1) rotate(-2deg); opacity: 1; }
+      100% { transform: translateX(-50%) scale(1.1, 1.2) rotate(2deg); opacity: 0.9; }
+    }
+
+    .blown .flame { animation: blow-out 0.5s ease forwards; }
+    @keyframes blow-out {
+      0% { opacity: 1; transform: translateX(-50%) scale(1); }
+      30% { opacity: 1; transform: translateX(-80%) scale(0.5); }
+      100% { opacity: 0; transform: translateX(-50%) scale(0) translateY(-30px); }
+    }
+
+    .smoke {
+      position: absolute;
+      top: -16px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 8px;
+      height: 20px;
+      background: rgba(200, 200, 200, 0.5);
+      border-radius: 50%;
+      opacity: 0;
+      filter: blur(3px);
+    }
+
+    .blown .smoke { animation: smoke-rise 2s ease forwards; animation-delay: 0.4s; }
+    @keyframes smoke-rise {
+      0% { opacity: 0; transform: translateX(-50%) translateY(0) scale(1); }
+      50% { opacity: 0.6; transform: translateX(-50%) translateY(-40px) scale(1.5); }
+      100% { opacity: 0; transform: translateX(-80%) translateY(-80px) scale(2); }
+    }
+
+    /* Red/black themed cake */
+    .cake-top {
+      position: absolute;
+      top: 55px;
+      left: 20px;
+      width: 200px;
+      height: 50px;
+      background: linear-gradient(to bottom, var(--red) 0%, var(--blood) 100%);
+      border-radius: 10px 10px 5px 5px;
+      box-shadow: inset 0 -5px 0 rgba(0,0,0,0.3);
+    }
+
+    .cake-top::after {
+      content: '';
+      position: absolute;
+      top: 5px; left: 10px; right: 10px;
+      height: 10px;
+      background: repeating-linear-gradient(90deg, var(--gold) 0px, var(--gold) 15px, var(--red) 15px, var(--red) 30px);
+      border-radius: 5px;
+    }
+
+    .cake-middle {
+      position: absolute;
+      top: 100px;
+      left: 10px;
+      width: 220px;
+      height: 55px;
+      background: linear-gradient(to bottom, var(--coal) 0%, var(--jet) 100%);
+      border-radius: 5px;
+      box-shadow: inset 0 -5px 0 rgba(0,0,0,0.4);
+    }
+
+    .cake-middle::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 8px;
+      background: repeating-linear-gradient(90deg, var(--gold) 0px, var(--gold) 10px, var(--crimson) 10px, var(--crimson) 20px, var(--white) 20px, var(--white) 30px, var(--red) 30px, var(--red) 40px);
+      border-radius: 5px 5px 0 0;
+    }
+
+    .cake-bottom {
+      position: absolute;
+      top: 155px;
+      left: 0;
+      width: 240px;
+      height: 55px;
+      background: linear-gradient(to bottom, var(--red) 0%, var(--blood) 100%);
+      border-radius: 5px;
+      box-shadow: inset 0 -5px 0 rgba(0,0,0,0.3);
+    }
+
+    .cake-plate {
+      position: absolute;
+      top: 205px;
+      left: -10px;
+      width: 260px;
+      height: 15px;
+      background: linear-gradient(to bottom, var(--silver), #666);
+      border-radius: 50%;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    }
+
+    /* WISH CARD (swipeable) */
+    .wish-section { margin-top: 30px; }
+
+    .section-title {
+      font-family: 'Bungee', cursive;
+      font-size: clamp(22px, 5vw, 28px);
+      text-align: center;
+      margin-bottom: 20px;
+      color: var(--white);
+      text-shadow: 3px 3px 0 var(--blood), 5px 5px 15px rgba(0,0,0,0.8);
+      letter-spacing: 2px;
+    }
+
+    .wish-card-wrapper {
+      position: relative;
+      touch-action: pan-y;
+    }
+
+    .wish-card {
+      background: linear-gradient(135deg, var(--coal) 0%, var(--jet) 100%);
+      color: var(--white);
+      border-radius: 24px;
+      padding: 35px 28px;
+      box-shadow:
+        0 0 50px rgba(220, 38, 38, 0.5),
+        0 20px 50px rgba(0,0,0,0.8),
+        inset 0 0 30px rgba(220, 38, 38, 0.1);
+      min-height: 220px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      border: 3px solid var(--red);
+      transition: transform 0.1s ease, opacity 0.3s ease;
+      cursor: grab;
+    }
+
+    .wish-card:active { cursor: grabbing; }
+
+    .wish-card.dismissed {
+      opacity: 0;
+      transform: translateX(var(--dismiss-x, 100vw)) rotate(var(--dismiss-r, 30deg)) scale(0.5);
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+
+    .wish-emoji {
+      font-size: 72px;
+      margin-bottom: 15px;
+      filter:
+        drop-shadow(0 3px 0 var(--blood))
+        drop-shadow(0 6px 0 rgba(185, 28, 28, 0.5))
+        drop-shadow(0 12px 20px rgba(0,0,0,0.6))
+        drop-shadow(0 0 30px rgba(255, 23, 68, 0.4));
+      animation: emoji-bounce-3d 2.5s ease-in-out infinite;
+      display: inline-block;
+    }
+
+    .wish-text {
+      font-size: clamp(16px, 4vw, 19px);
+      line-height: 1.55;
+      font-weight: 500;
+      color: var(--white);
+    }
+
+    .wish-text .highlight {
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    .swipe-hint {
+      text-align: center;
+      margin-top: 20px;
+      font-family: 'Pacifico', cursive;
+      font-size: 18px;
+      color: var(--crimson);
+      text-shadow: 0 0 15px rgba(255, 23, 68, 0.8);
+      animation: swipe-prompt 2s ease-in-out infinite;
+    }
+
+    @keyframes swipe-prompt {
+      0%, 100% { opacity: 0.6; transform: translateX(0); }
+      25% { transform: translateX(-10px); }
+      75% { transform: translateX(10px); opacity: 1; }
+    }
+
+    .boom-emoji-row {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 8px;
+      font-size: 30px;
+    }
+
+    /* FINAL MESSAGE */
+    .final-message {
+      margin-top: 50px;
+      text-align: center;
+      padding: 30px 20px;
+      opacity: 1;
+      transition: all 0.6s ease;
+    }
+
+    .final-text {
+      font-family: 'Pacifico', cursive;
+      font-size: clamp(26px, 6vw, 38px);
+      line-height: 1.4;
+      margin-bottom: 30px;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--white) 50%, var(--gold) 100%);
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 3s ease infinite;
+      filter: drop-shadow(0 5px 20px rgba(255, 215, 0, 0.6)) drop-shadow(0 10px 20px rgba(0,0,0,0.8));
+    }
+
+    .final-btn {
+      background: linear-gradient(135deg, var(--red), var(--blood));
+      color: var(--gold);
+      font-family: 'Bungee', cursive;
+      font-size: 18px;
+      padding: 18px 32px;
+      border: 3px solid var(--gold);
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 0 30px rgba(255, 23, 68, 0.6), 0 10px 30px rgba(0,0,0,0.8);
+      transition: all 0.2s;
+      letter-spacing: 2px;
+    }
+
+    .final-btn:hover { transform: scale(1.1); box-shadow: 0 0 50px rgba(255, 23, 68, 1), 0 15px 40px rgba(0,0,0,0.9); }
+
+    /* BALLOONS */
+    .balloons { position: fixed; inset: 0; pointer-events: none; z-index: 5; }
+    .balloon {
+      position: absolute;
+      bottom: -100px;
+      width: 50px;
+      height: 60px;
+      border-radius: 50% 50% 50% 50% / 45% 45% 55% 55%;
+      opacity: 0;
+      animation: float-up linear forwards;
+    }
+    .balloon::before {
+      content: '';
+      position: absolute;
+      bottom: -8px; left: 50%;
+      transform: translateX(-50%);
+      border: 5px solid transparent;
+      border-top-color: inherit;
+    }
+    .balloon::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: 50%;
+      width: 1px; height: 80px;
+      background: rgba(255,255,255,0.3);
+    }
+    @keyframes float-up {
+      0% { opacity: 0; transform: translateY(0) translateX(0); }
+      10% { opacity: 1; }
+      50% { transform: translateY(-50vh) translateX(30px); }
+      100% { opacity: 0.8; transform: translateY(-120vh) translateX(-30px); }
+    }
+
+    /* CONFETTI */
+    .confetti {
+      position: fixed;
+      top: -20px;
+      width: 10px; height: 10px;
+      opacity: 0;
+      z-index: 50;
+      pointer-events: none;
+    }
+    @keyframes confetti-fall {
+      0% { opacity: 1; transform: translateY(0) rotate(0deg); }
+      100% { opacity: 0; transform: translateY(110vh) rotate(720deg); }
+    }
+    @keyframes burst {
+      0% { opacity: 1; transform: translate(0, 0) scale(1) rotate(0deg); }
+      100% { opacity: 0; transform: translate(var(--tx), var(--ty)) scale(0) rotate(720deg); }
+    }
+
+    /* NUCLEAR BOMB EFFECTS */
+    .flash {
+      position: fixed;
+      inset: 0;
+      background: white;
+      z-index: 999;
+      pointer-events: none;
+      opacity: 0;
+    }
+
+    .flash.active { animation: flash-explosion 0.6s ease-out; }
+
+    @keyframes flash-explosion {
+      0% { opacity: 0; }
+      5% { opacity: 1; background: white; }
+      30% { opacity: 0.7; background: var(--crimson); }
+      100% { opacity: 0; background: var(--blood); }
+    }
+
+    .shockwave {
+      position: fixed;
+      top: 50%; left: 50%;
+      width: 20px; height: 20px;
+      border: 6px solid var(--crimson);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 998;
+      pointer-events: none;
+      opacity: 0;
+    }
+
+    .shockwave.active { animation: shockwave-expand 1.2s ease-out forwards; }
+
+    @keyframes shockwave-expand {
+      0% { width: 20px; height: 20px; opacity: 1; border-width: 10px; }
+      100% { width: 250vmax; height: 250vmax; opacity: 0; border-width: 2px; }
+    }
+
+    .boom-text {
+      position: fixed;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      font-family: 'Bungee', cursive;
+      font-size: clamp(60px, 20vw, 180px);
+      color: var(--white);
+      text-shadow:
+        0 0 20px var(--crimson),
+        0 0 40px var(--red),
+        0 0 80px var(--blood),
+        5px 5px 0 var(--jet);
+      z-index: 1000;
+      pointer-events: none;
+      opacity: 0;
+      letter-spacing: 5px;
+      white-space: nowrap;
+    }
+
+    .boom-text.active { animation: boom-pop 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+
+    @keyframes boom-pop {
+      0% { opacity: 0; transform: translate(-50%, -50%) scale(0) rotate(-30deg); }
+      30% { opacity: 1; transform: translate(-50%, -50%) scale(1.3) rotate(5deg); }
+      60% { opacity: 1; transform: translate(-50%, -50%) scale(1) rotate(-2deg); }
+      100% { opacity: 0; transform: translate(-50%, -50%) scale(1.8) rotate(10deg); }
+    }
+
+    .shake-screen { animation: shake 0.6s ease; }
+    @keyframes shake {
+      0%, 100% { transform: translate(0, 0); }
+      10% { transform: translate(-15px, -8px) rotate(-1deg); }
+      20% { transform: translate(15px, 8px) rotate(1deg); }
+      30% { transform: translate(-12px, 12px) rotate(-1deg); }
+      40% { transform: translate(12px, -8px) rotate(1deg); }
+      50% { transform: translate(-8px, 8px) rotate(-0.5deg); }
+      60% { transform: translate(8px, -8px) rotate(0.5deg); }
+      70% { transform: translate(-5px, 5px); }
+      80% { transform: translate(5px, -5px); }
+      90% { transform: translate(-2px, 2px); }
+    }
+
+    /* FIREWORKS */
+    .firework {
+      position: fixed;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 100;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sparks -->
+  <div class="sparkles" id="sparkles"></div>
+
+  <!-- Balloons -->
+  <div class="balloons" id="balloons"></div>
+
+  <!-- Sound toggle -->
+  <button class="sound-toggle" id="soundToggle" onclick="toggleSound()">🔊</button>
+
+  <!-- Nuclear bomb effects (hidden until triggered) -->
+  <div class="flash" id="flash"></div>
+  <div class="shockwave" id="shockwave1"></div>
+  <div class="shockwave" id="shockwave2" style="animation-delay: 0.2s;"></div>
+  <div class="shockwave" id="shockwave3" style="animation-delay: 0.4s;"></div>
+  <div class="boom-text" id="boomText">💥 BOOM! 💥</div>
+
+  <!-- INTRO -->
+  <div id="intro">
+    <div class="intro-emoji">🎁</div>
+    <div class="intro-title">A GIFT FOR...</div>
+    <div class="intro-sub">Deo</div>
+    <button class="surprise-btn" onclick="revealSurprise()">
+      💥 UNBOX THE CHAOS 💥
+    </button>
+  </div>
+
+  <!-- MAIN -->
+  <div id="main">
+    <div class="hero">
+      <div class="hero-title">HAPPY<br>BIRTHDAY</div>
+      <div class="hero-name">Deo!</div>
+      <div class="emoji-row">
+        <span>🎂</span>
+        <span>🥳</span>
+        <span>🎈</span>
+        <span>🎁</span>
+        <span>✨</span>
+      </div>
+    </div>
+
+    <!-- Interactive cake -->
+    <div class="cake-container" id="cake" onclick="blowCandles()">
+      <div class="cake">
+        <div class="candle"><div class="flame"></div><div class="smoke"></div></div>
+        <div class="candle"><div class="flame"></div><div class="smoke"></div></div>
+        <div class="candle"><div class="flame"></div><div class="smoke"></div></div>
+        <div class="candle"><div class="flame"></div><div class="smoke"></div></div>
+        <div class="cake-top"></div>
+        <div class="cake-middle"></div>
+        <div class="cake-bottom"></div>
+        <div class="cake-plate"></div>
+      </div>
+      <div class="hint">👆 Klik untuk tiup lilin!</div>
+    </div>
+
+    <!-- Single wish card (swipeable) -->
+    <div class="wish-section">
+      <div class="section-title">🔥 PESAN SPESIAL 🔥</div>
+      <div class="wish-card-wrapper">
+        <div class="wish-card" id="wishCard">
+          <div class="wish-emoji">🥳</div>
+          <div class="wish-text">
+            <strong class="highlight">Happy birthday mi bozzz!</strong> 🥳✨<br><br>
+            <strong class="highlight">More money, zero encok, endless adventures with me!</strong> Sehat selalu ya biar impian kita keliling dunia bisa kecentang semua! 💸✈️
+          </div>
+        </div>
+      </div>
+      <div class="swipe-hint">
+        ← Geser untuk BOM NUKLIR 💣
+        <div class="boom-emoji-row">💥 🚀 💥</div>
+      </div>
+    </div>
+
+    <!-- Final message -->
+    <div class="final-message" id="finalMessage">
+      <div class="final-text">Wish u all the best mi bozzz!</div>
+      <button class="final-btn" onclick="megaCelebrate()">🎆 LEDAKKAN LAGI 🎆</button>
+    </div>
+  </div>
+
+  <script>
+    // ===== SPARKS =====
+    const sparklesContainer = document.getElementById('sparkles');
+    for (let i = 0; i < 40; i++) {
+      const s = document.createElement('div');
+      s.className = 'sparkle';
+      s.style.left = Math.random() * 100 + '%';
+      s.style.top = Math.random() * 100 + '%';
+      s.style.animationDelay = Math.random() * 4 + 's';
+      s.style.animationDuration = (3 + Math.random() * 3) + 's';
+      sparklesContainer.appendChild(s);
+    }
+
+    // ===== AUDIO =====
+    let audioContext = null;
+    let soundEnabled = true;
+
+    function initAudio() {
+      if (!audioContext) {
+        try {
+          audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        } catch(e) { console.log('Audio not supported'); }
+      }
+      return audioContext;
+    }
+
+    function toggleSound() {
+      soundEnabled = !soundEnabled;
+      document.getElementById('soundToggle').textContent = soundEnabled ? '🔊' : '🔇';
+      if (!soundEnabled && audioContext) {
+        audioContext.suspend();
+      } else if (soundEnabled && audioContext) {
+        audioContext.resume();
+      }
+    }
+
+    function playNote(frequency, startTime, duration, type = 'triangle', volume = 0.25) {
+      if (!soundEnabled) return;
+      const ctx = initAudio();
+      if (!ctx) return;
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+
+      osc.type = type;
+      osc.frequency.value = frequency;
+
+      // ADSR envelope for nicer sound
+      gain.gain.setValueAtTime(0, startTime);
+      gain.gain.linearRampToValueAtTime(volume, startTime + 0.03);
+      gain.gain.linearRampToValueAtTime(volume * 0.7, startTime + duration * 0.5);
+      gain.gain.linearRampToValueAtTime(0, startTime + duration);
+
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+
+      osc.start(startTime);
+      osc.stop(startTime + duration + 0.05);
+    }
+
+    function playHappyBirthday() {
+      if (!soundEnabled) return;
+      const ctx = initAudio();
+      if (!ctx) return;
+      if (ctx.state === 'suspended') ctx.resume();
+
+      const n = {
+        C4: 261.63, D4: 293.66, E4: 329.63, F4: 349.23,
+        G4: 392.00, A4: 440.00, Bb4: 466.16,
+        C5: 523.25
+      };
+
+      const q = 0.42, e = 0.21, h = 0.85, dq = 0.63;
+
+      // Happy Birthday in C major
+      const melody = [
+        // "Hap-py birth-day to you"
+        [n.C4, e], [n.C4, e], [n.D4, q], [n.C4, q], [n.F4, q], [n.E4, h],
+        [null, 0.15],
+        // "Hap-py birth-day to you"
+        [n.C4, e], [n.C4, e], [n.D4, q], [n.C4, q], [n.G4, q], [n.F4, h],
+        [null, 0.15],
+        // "Hap-py birth-day dear De-o"
+        [n.C4, e], [n.C4, e], [n.C5, q], [n.A4, q], [n.F4, q], [n.E4, q], [n.D4, dq],
+        [null, 0.15],
+        // "Hap-py birth-day to you"
+        [n.Bb4, e], [n.Bb4, e], [n.A4, q], [n.F4, q], [n.G4, q], [n.F4, h]
+      ];
+
+      let time = ctx.currentTime + 0.2;
+      melody.forEach(([freq, dur]) => {
+        if (freq !== null) {
+          playNote(freq, time, dur * 0.95, 'triangle', 0.22);
+          // Add octave harmonic for richness
+          playNote(freq * 2, time, dur * 0.95, 'sine', 0.08);
+        }
+        time += dur;
+      });
+
+      // After the melody ends, speak "Deo!" with TTS
+      const totalDuration = (time - ctx.currentTime) * 1000;
+      setTimeout(() => {
+        speakDeo();
+      }, totalDuration + 200);
+    }
+
+    function speakDeo() {
+      if (!soundEnabled) return;
+      if ('speechSynthesis' in window) {
+        const utter = new SpeechSynthesisUtterance('Happy Birthday Deo!');
+        utter.lang = 'en-US';
+        utter.rate = 0.9;
+        utter.pitch = 1.3;
+        utter.volume = 0.8;
+        speechSynthesis.speak(utter);
+      }
+    }
+
+    function playExplosionSound() {
+      if (!soundEnabled) return;
+      const ctx = initAudio();
+      if (!ctx) return;
+      if (ctx.state === 'suspended') ctx.resume();
+
+      // White noise explosion
+      const bufferSize = ctx.sampleRate * 1.2;
+      const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+      const data = buffer.getChannelData(0);
+      for (let i = 0; i < bufferSize; i++) {
+        data[i] = (Math.random() * 2 - 1) * Math.pow(1 - i/bufferSize, 2);
+      }
+
+      const noise = ctx.createBufferSource();
+      noise.buffer = buffer;
+
+      // Low-pass filter for "boom" effect
+      const filter = ctx.createBiquadFilter();
+      filter.type = 'lowpass';
+      filter.frequency.setValueAtTime(2000, ctx.currentTime);
+      filter.frequency.exponentialRampToValueAtTime(60, ctx.currentTime + 1.0);
+
+      // Gain envelope
+      const gain = ctx.createGain();
+      gain.gain.setValueAtTime(0.8, ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 1.2);
+
+      noise.connect(filter);
+      filter.connect(gain);
+      gain.connect(ctx.destination);
+
+      noise.start();
+      noise.stop(ctx.currentTime + 1.2);
+
+      // Add a low frequency "thump"
+      const thump = ctx.createOscillator();
+      const thumpGain = ctx.createGain();
+      thump.type = 'sine';
+      thump.frequency.setValueAtTime(80, ctx.currentTime);
+      thump.frequency.exponentialRampToValueAtTime(20, ctx.currentTime + 0.3);
+      thumpGain.gain.setValueAtTime(0.5, ctx.currentTime);
+      thumpGain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.4);
+      thump.connect(thumpGain);
+      thumpGain.connect(ctx.destination);
+      thump.start();
+      thump.stop(ctx.currentTime + 0.4);
+    }
+
+    // ===== CAKE =====
+    let candlesBlown = false;
+    function blowCandles() {
+      if (candlesBlown) return;
+      candlesBlown = true;
+      document.getElementById('cake').classList.add('blown');
+      const cake = document.getElementById('cake').getBoundingClientRect();
+      for (let i = 0; i < 50; i++) {
+        burstConfetti(cake.left + cake.width/2, cake.top + 50);
+      }
+      setTimeout(() => {
+        document.getElementById('cake').classList.remove('blown');
+        candlesBlown = false;
+      }, 5000);
+    }
+
+    // ===== CONFETTI =====
+    const colors = ['#DC2626', '#FF1744', '#FFD700', '#FFFFFF', '#B91C1C', '#FFC107', '#E11D48'];
+    const shapes = ['square', 'circle', 'triangle'];
+
+    function createConfetti(x, y, count = 1, burst = false) {
+      for (let i = 0; i < count; i++) {
+        const confetti = document.createElement('div');
+        confetti.className = 'confetti';
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        const shape = shapes[Math.floor(Math.random() * shapes.length)];
+
+        confetti.style.background = color;
+        if (shape === 'circle') confetti.style.borderRadius = '50%';
+        if (shape === 'triangle') {
+          confetti.style.width = '0';
+          confetti.style.height = '0';
+          confetti.style.background = 'transparent';
+          confetti.style.borderLeft = '6px solid transparent';
+          confetti.style.borderRight = '6px solid transparent';
+          confetti.style.borderBottom = `12px solid ${color}`;
+        } else {
+          const size = 6 + Math.random() * 10;
+          confetti.style.width = size + 'px';
+          confetti.style.height = size + 'px';
+        }
+
+        if (burst) {
+          confetti.style.left = x + 'px';
+          confetti.style.top = y + 'px';
+          const angle = Math.random() * Math.PI * 2;
+          const distance = 100 + Math.random() * 300;
+          confetti.style.setProperty('--tx', Math.cos(angle) * distance + 'px');
+          confetti.style.setProperty('--ty', Math.sin(angle) * distance + 'px');
+          confetti.style.animation = `burst ${0.8 + Math.random() * 0.8}s ease-out forwards`;
+        } else {
+          confetti.style.left = Math.random() * 100 + '%';
+          confetti.style.top = '-20px';
+          confetti.style.animation = `confetti-fall ${3 + Math.random() * 3}s linear forwards`;
+          confetti.style.animationDelay = Math.random() * 2 + 's';
+        }
+
+        document.body.appendChild(confetti);
+        setTimeout(() => confetti.remove(), 6500);
+      }
+    }
+
+    function burstConfetti(x, y) { createConfetti(x, y, 15, true); }
+
+    // ===== BALLOONS =====
+    function launchBalloon() {
+      const balloon = document.createElement('div');
+      balloon.className = 'balloon';
+      const color = colors[Math.floor(Math.random() * colors.length)];
+      balloon.style.background = `radial-gradient(circle at 30% 30%, ${color}dd, ${color})`;
+      balloon.style.borderTopColor = color;
+      balloon.style.left = Math.random() * 90 + '%';
+      balloon.style.animationDuration = (6 + Math.random() * 4) + 's';
+      document.getElementById('balloons').appendChild(balloon);
+      setTimeout(() => balloon.remove(), 12000);
+    }
+
+    // ===== FIREWORKS =====
+    function launchFirework(x, y) {
+      const particles = 40;
+      for (let i = 0; i < particles; i++) {
+        const fw = document.createElement('div');
+        fw.className = 'firework';
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        fw.style.background = color;
+        fw.style.boxShadow = `0 0 10px ${color}, 0 0 20px ${color}`;
+        fw.style.left = x + 'px';
+        fw.style.top = y + 'px';
+
+        const angle = (Math.PI * 2 / particles) * i;
+        const velocity = 100 + Math.random() * 150;
+        fw.style.setProperty('--tx', Math.cos(angle) * velocity + 'px');
+        fw.style.setProperty('--ty', Math.sin(angle) * velocity + 'px');
+        fw.style.animation = `burst ${1 + Math.random() * 0.5}s ease-out forwards`;
+
+        document.body.appendChild(fw);
+        setTimeout(() => fw.remove(), 2000);
+      }
+    }
+
+    // ===== NUCLEAR BOMB =====
+    let bombTriggered = false;
+    function triggerNuclearBomb() {
+      if (bombTriggered) return;
+      bombTriggered = true;
+
+      // 1. White flash
+      const flash = document.getElementById('flash');
+      flash.classList.remove('active');
+      void flash.offsetWidth; // force reflow
+      flash.classList.add('active');
+
+      // 2. Shockwaves
+      ['shockwave1', 'shockwave2', 'shockwave3'].forEach((id, i) => {
+        const sw = document.getElementById(id);
+        sw.classList.remove('active');
+        void sw.offsetWidth;
+        setTimeout(() => sw.classList.add('active'), i * 200);
+      });
+
+      // 3. BOOM text
+      const boom = document.getElementById('boomText');
+      boom.classList.remove('active');
+      void boom.offsetWidth;
+      boom.classList.add('active');
+
+      // 4. Screen shake
+      document.body.classList.add('shake-screen');
+      setTimeout(() => document.body.classList.remove('shake-screen'), 600);
+
+      // 5. Explosion sound
+      playExplosionSound();
+
+      // 6. MASSIVE confetti
+      createConfetti(0, 0, 300, false);
+      const cx = window.innerWidth / 2;
+      const cy = window.innerHeight / 2;
+      for (let i = 0; i < 200; i++) {
+        burstConfetti(cx, cy);
+      }
+
+      // 7. Fireworks everywhere
+      setTimeout(() => launchFirework(cx, cy), 100);
+      setTimeout(() => launchFirework(cx - 200, cy - 100), 300);
+      setTimeout(() => launchFirework(cx + 200, cy - 100), 400);
+      setTimeout(() => launchFirework(cx - 150, cy + 150), 500);
+      setTimeout(() => launchFirework(cx + 150, cy + 150), 600);
+      setTimeout(() => launchFirework(100, 200), 700);
+      setTimeout(() => launchFirework(window.innerWidth - 100, 200), 800);
+      setTimeout(() => launchFirework(cx, 150), 900);
+
+      // 8. Balloon tsunami
+      for (let i = 0; i < 25; i++) {
+        setTimeout(launchBalloon, i * 100);
+      }
+
+      // 9. Reset bomb after cooldown so it can be re-triggered
+      setTimeout(() => { bombTriggered = false; }, 2500);
+    }
+
+    // ===== SWIPE DETECTION =====
+    const wishCard = document.getElementById('wishCard');
+    let startX = 0, startY = 0, currentX = 0, isDragging = false;
+
+    function handleStart(x, y) {
+      startX = x;
+      startY = y;
+      currentX = x;
+      isDragging = true;
+      wishCard.style.transition = 'none';
+    }
+
+    function handleMove(x, y) {
+      if (!isDragging) return;
+      currentX = x;
+      const dx = x - startX;
+      const dy = Math.abs(y - startY);
+      // Only slide if horizontal movement dominates
+      if (Math.abs(dx) > dy) {
+        const rotation = dx / 20;
+        wishCard.style.transform = `translateX(${dx}px) rotate(${rotation}deg)`;
+      }
+    }
+
+    function handleEnd() {
+      if (!isDragging) return;
+      isDragging = false;
+      const dx = currentX - startX;
+      wishCard.style.transition = 'transform 0.4s ease, opacity 0.4s ease';
+
+      if (Math.abs(dx) > 100) {
+        // Swiped past threshold → TRIGGER NUCLEAR BOMB
+        wishCard.style.setProperty('--dismiss-x', (dx > 0 ? '150vw' : '-150vw'));
+        wishCard.style.setProperty('--dismiss-r', (dx > 0 ? '30deg' : '-30deg'));
+        wishCard.classList.add('dismissed');
+        setTimeout(() => {
+          triggerNuclearBomb();
+          // Bring card back after explosion
+          setTimeout(() => {
+            wishCard.classList.remove('dismissed');
+            wishCard.style.transform = '';
+          }, 2200);
+        }, 200);
+      } else {
+        // Snap back
+        wishCard.style.transform = 'translateX(0) rotate(0)';
+      }
+    }
+
+    // Touch events (mobile)
+    wishCard.addEventListener('touchstart', (e) => {
+      handleStart(e.touches[0].clientX, e.touches[0].clientY);
+    }, { passive: true });
+    wishCard.addEventListener('touchmove', (e) => {
+      handleMove(e.touches[0].clientX, e.touches[0].clientY);
+    }, { passive: true });
+    wishCard.addEventListener('touchend', handleEnd);
+
+    // Mouse events (desktop)
+    wishCard.addEventListener('mousedown', (e) => {
+      e.preventDefault();
+      handleStart(e.clientX, e.clientY);
+    });
+    document.addEventListener('mousemove', (e) => {
+      if (isDragging) handleMove(e.clientX, e.clientY);
+    });
+    document.addEventListener('mouseup', handleEnd);
+
+    // Also: tap/click wish card without swiping = small confetti nudge
+    wishCard.addEventListener('click', (e) => {
+      if (Math.abs(currentX - startX) < 10) {
+        const r = wishCard.getBoundingClientRect();
+        for (let i = 0; i < 20; i++) burstConfetti(r.left + r.width/2, r.top + r.height/2);
+      }
+    });
+
+    // ===== REVEAL =====
+    function revealSurprise() {
+      document.getElementById('intro').classList.add('hidden');
+      document.getElementById('soundToggle').classList.add('visible');
+      setTimeout(() => {
+        document.getElementById('main').classList.add('visible');
+        createConfetti(0, 0, 200, false);
+        for (let i = 0; i < 15; i++) setTimeout(launchBalloon, i * 300);
+        setInterval(launchBalloon, 2500);
+        // 🎵 Play Happy Birthday!
+        setTimeout(() => playHappyBirthday(), 400);
+      }, 500);
+    }
+
+    // ===== MEGA CELEBRATE =====
+    function megaCelebrate() {
+      triggerNuclearBomb();
+      playHappyBirthday();
+    }
+
+    // ===== CLICK-ANYWHERE MINI BURST =====
+    document.addEventListener('click', (e) => {
+      if (e.target.tagName !== 'BUTTON'
+          && !e.target.closest('.cake-container')
+          && !e.target.closest('.wish-card')
+          && !e.target.closest('.sound-toggle')) {
+        burstConfetti(e.clientX, e.clientY);
+      }
+    });
+  </script>
+
+</body>
+</html>
